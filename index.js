@@ -11,10 +11,9 @@ app.use(cors());
 
 
 // use the desired mongoDb connection string
-mongoose.connect('mongodb://127.0.0.1:27017/bitlink')
-    .then(() => console.log('Mongo connected'))
-    .catch(err => console.error('Mongo connection error:', err));
-
+mongoose.connect("*************").then(()=>{
+    console.log('Mongo connected');
+})
 app.use('/static', express.static(path.join(__dirname, 'static')));
 
 app.use(express.text());
